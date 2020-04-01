@@ -36,6 +36,21 @@ $kubectl port-forward service/frontend 8100:8100
 
 Then open at browser localhost:8100
 
+Docker hub images:
+
+https://hub.docker.com/repository/docker/yunuskilicdev/udacity-restapi-user
+
+https://hub.docker.com/repository/docker/yunuskilicdev/reverseproxy
+
+https://hub.docker.com/repository/docker/yunuskilicdev/udacity-frontend
+
+https://hub.docker.com/repository/docker/yunuskilicdev/udacity-restapi-feed
+
+PS:
+
+Because of my current PC, I used 1 deployment for each container.
+
+
 # Udagram Image Filtering Microservice
 
 Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.
