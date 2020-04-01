@@ -1,0 +1,18 @@
+  
+sudo: required
+services:
+  - docker
+
+script:
+  - docker build -t yunuskilicdev/udacity-restapi-feed ./udacity-c3-restapi-feed
+  - docker build -t yunuskilicdev/udacity-restapi-user ./udacity-c3-restapi-user
+  - docker build -t yunuskilicdev/udacity-frontend ./udacity-c3-frontend
+  - docker build -t yunuskilicdev/reverseproxy ./udacity-c3-deployment/docker
+  # Log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take those images and push them to docker hub
+  - docker push yunuskilicdev/udacity-restapi-feed
+  - docker push yunuskilicdev/udacity-restapi-user
+  - docker push yunuskilicdev/udacity-frontend
+  - docker push yunuskilicdev/reverseproxy
+
