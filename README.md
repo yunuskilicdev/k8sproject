@@ -9,18 +9,29 @@ Fill env-configmap.yaml
 $minikube start
 
 $kubectl apply -f /udacity-c3-deployment/k8s/aws-secret.yaml
+
 $kubectl apply -f /udacity-c3-deployment/k8s/env-secret.yaml
+
 $kubectl apply -f /udacity-c3-deployment/k8s/env-configmap.yaml
+
 $kubectl apply -f /udacity-c3-deployment/k8s/backend-feed-deployment.yaml
+
 $kubectl apply -f /udacity-c3-deployment/k8s/backend-feed-service.yaml
+
 $kubectl apply -f /udacity-c3-deployment/k8s/backend-user-deployment.yaml
+
 $kubectl apply -f /udacity-c3-deployment/k8s/backend-user-service.yaml
+
 $kubectl apply -f /udacity-c3-deployment/k8s/frontend-deployment.yaml
+
 $kubectl apply -f /udacity-c3-deployment/k8s/frontend-service.yaml
+
 $kubectl apply -f /udacity-c3-deployment/k8s/reverseproxy-deployment.yaml
+
 $kubectl apply -f /udacity-c3-deployment/k8s/reverseproxy-service.yaml
 
 $kubectl port-forward service/reverseproxy 8080:8080
+
 $kubectl port-forward service/frontend 8100:8100
 
 Then open at browser localhost:8100
